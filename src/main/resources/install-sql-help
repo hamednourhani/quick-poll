@@ -2,3 +2,4 @@
 
 complete and copy the schema.sql & import.sql and copy theme
 to src/main/resources to be used by spring-boot
+
