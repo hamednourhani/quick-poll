@@ -1,0 +1,30 @@
+spring:
+  profiles.active: production
+
+---
+
+spring:
+  profiles: dev
+  datasource.url : jdbc:h2:~/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  datasource.driverClassName : org.h2.Driver
+  datasource.username : sa
+  datasource.password :
+  jpa.database-platform : org.hibernate.dialect.H2Dialect
+  jpa.hibernate.ddl-auto : create-drop
+  jpa.show-sql : true
+
+---
+
+spring:
+  profiles: production
+  datasource.url : jdbc:mysql://localhost:3306/quickpoll?autoReconnect=true&useSSL=false
+  datasource.username : root
+  datasource.password : root
+  datasource.driver-class-name: com.mysql.jdbc.Driver
+  jpa.properties.hibernate.dialect : org.hibernate.dialect.MySQL5Dialect
+  jpa.hibernate.ddl-auto : create-drop
+  datasource.testWhileIdle : true
+  datasource.validationQuery : SELECT 1
+  jpa.show-sql : true
+  jpa.hibernate.naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+
