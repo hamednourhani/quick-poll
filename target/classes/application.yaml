@@ -1,9 +1,9 @@
 spring:
-  profiles.active: production
+  profiles.active : dev 
 
----
+--- 
 
-spring:
+spring: 
   profiles: dev
   datasource.url : jdbc:h2:~/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
   datasource.driverClassName : org.h2.Driver
@@ -12,6 +12,7 @@ spring:
   jpa.database-platform : org.hibernate.dialect.H2Dialect
   jpa.hibernate.ddl-auto : create-drop
   jpa.show-sql : true
+  devtools.restart.enabled : true
 
 ---
 
@@ -27,4 +28,5 @@ spring:
   datasource.validationQuery : SELECT 1
   jpa.show-sql : true
   jpa.hibernate.naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+  devtools.restart.enabled : false
 
