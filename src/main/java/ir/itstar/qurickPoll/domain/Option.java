@@ -12,6 +12,8 @@ import javax.persistence.Table;
 @Table(name="POLL_OPTION")
 public class Option {
 
+	
+	
 	@Id
 	@GeneratedValue
 	@Column(name="OPTION_ID")
