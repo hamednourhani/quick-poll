@@ -5,12 +5,14 @@ spring:
 
 spring: 
   profiles: dev
-  datasource.url : jdbc:h2:~/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-  datasource.driverClassName : org.h2.Driver
+  datasource.url : jdbc:hsqldb:mem:testdb
+  datasource.driverClassName : org.hsqldb.jdbc.JDBCDriver 
   datasource.username : sa
   datasource.password :
-  jpa.database-platform : org.hibernate.dialect.H2Dialect
+  jpa.database-platform : org.hibernate.dialect.HSQLDialect
   jpa.hibernate.ddl-auto : create-drop
+  h2.console.enabled: true
+  h2.console.path: /console
   jpa.show-sql : true
   devtools.restart.enabled : true
 
@@ -29,6 +31,31 @@ spring:
   jpa.show-sql : true
   jpa.hibernate.naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
   devtools.restart.enabled : false
+--- 
+
+spring: 
+  profiles: h2db
+  datasource.url : jdbc:h2:~/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  datasource.driverClassName : org.h2.Driver
+  datasource.username : sa
+  datasource.password :
+  jpa.database-platform : org.hibernate.dialect.H2Dialect
+  jpa.hibernate.ddl-auto : create-drop
+  jpa.show-sql : true
+  devtools.restart.enabled : true
+  
+--- 
+
+spring: 
+  profiles: HSQLDB
+  datasource.url : jdbc:hsqldb:file:F:\DATABASE\quickpoll\testdb
+  datasource.driverClassName : org.hsqldb.jdbc.JDBCDriver
+  datasource.username : sa
+  datasource.password :
+  jpa.database-platform : org.hibernate.dialect.HSQLDialect
+  jpa.hibernate.ddl-auto : create-drop
+  jpa.show-sql : true
+  devtools.restart.enabled : true
 ---
 logging:
   level.org.hibernate.SQL: debug
