@@ -24,7 +24,6 @@ public class PollController {
 	
 	@RequestMapping(value="/polls",method=RequestMethod.GET)
 	public ResponseEntity<Iterable<Poll>> getAllPolls(){
-		Iterable<Poll> polls = pollRepository.findAll();
 		return new ResponseEntity<>(pollRepository.findAll(),HttpStatus.OK);
 	}
 	
@@ -42,8 +41,19 @@ public class PollController {
 	
 	@RequestMapping(value="/polls/{pollId}",method=RequestMethod.GET)
 	public ResponseEntity<Poll> getPoll(@PathVariable long pollId){
-		Poll p = pollRepository.findOne(pollId);
 		return new ResponseEntity<Poll>(pollRepository.findOne(pollId),HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/polls/{pollId}",method=RequestMethod.PUT)
+	public ResponseEntity<?> updatePoll(@PathVariable long pollId, @RequestBody Poll poll){
+		poll = pollRepository.save(poll);
+		return new ResponseEntity<>(poll, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/polls/{pollId}",method=RequestMethod.DELETE)
+	public ResponseEntity<?> deletePoll(@PathVariable long pollId){
+		pollRepository.delete(pollId);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 }
