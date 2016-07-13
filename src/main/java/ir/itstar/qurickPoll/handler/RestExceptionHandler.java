@@ -3,6 +3,7 @@ package ir.itstar.qurickPoll.handler;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,10 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.LocaleResolver;
 
 import ir.itstar.qurickPoll.dto.ErrorDetail;
 import ir.itstar.qurickPoll.dto.ValidationError;
@@ -21,19 +24,22 @@ import ir.itstar.qurickPoll.exception.ResourceNotFoundException;
 
 
 @ControllerAdvice
-public class RestExceptionHandler {
+public class RestExceptionHandler  {
 	
 	@Autowired
 	MessageSource messageSource;
 	
+	@Autowired
+	LocaleResolver localeResolver;
+	
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<?> handleResourceNotFoundException(ResourceNotFoundException
-		rnfe, HttpServletRequest request) {
+		rnfe, HttpServletRequest request,Locale locale) {
 		
 		ErrorDetail errorDetail = new ErrorDetail();
 		errorDetail.setTimeStamp(new Date().getTime());
 		errorDetail.setStatus(HttpStatus.NOT_FOUND.value());
-		errorDetail.setTitle("Resource Not Found error");
+		errorDetail.setTitle(messageSource.getMessage("quickpoll.not_found", null, locale));
 		errorDetail.setDetail(rnfe.getMessage());
 		errorDetail.setDeveloperMessage(rnfe.getClass().getName());
 	
@@ -42,7 +48,7 @@ public class RestExceptionHandler {
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<?> handleValidationError(MethodArgumentNotValidException
-		manve, HttpServletRequest request) {
+		manve, HttpServletRequest request,Locale locale) {
 		
 		ErrorDetail errorDetail = new ErrorDetail();
 		// Populate errorDetail instance
@@ -69,10 +75,27 @@ public class RestExceptionHandler {
 			}
 			ValidationError validationError = new ValidationError();
 			validationError.setCode(fe.getCode());
-			validationError.setMessage(messageSource.getMessage(fe, null));
+			validationError.setMessage(messageSource.getMessage(fe, locale));
 			validationErrorList.add(validationError);
 		}
 	
 		return new ResponseEntity<>(errorDetail, null, HttpStatus. BAD_REQUEST);
 	}
+	
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	public ResponseEntity<Object> handleHttpMessageNotReadable(
+		HttpMessageNotReadableException ex) {
+		ErrorDetail errorDetail = new ErrorDetail();
+		errorDetail.setTimeStamp(new Date().getTime());
+		errorDetail.setStatus(HttpStatus.BAD_REQUEST.value());
+		errorDetail.setTitle("Message Not Readable");
+		errorDetail.setDetail(ex.getMessage());
+		errorDetail.setDeveloperMessage(ex.getClass().getName());
+		
+		return new ResponseEntity<>(errorDetail,null,HttpStatus.BAD_REQUEST);
+	}
+	
+	
+
+	
 }

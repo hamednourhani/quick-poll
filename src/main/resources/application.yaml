@@ -3,6 +3,9 @@ spring:
   mvc.throw-exception-if-no-handler-found: true
   resources.add-mappings: false
   messages.basename : i18n/messages , i18n/ValidationMessages
+  messages.fallback-to-system-locale : false
+  messages.encoding: UTF-8
+  mvc.locale : en
 --- 
 
 spring: 
