@@ -6,7 +6,7 @@ spring:
   messages.fallback-to-system-locale : false
   messages.encoding: UTF-8
   mvc.locale : en
-  boot.admin.url: http://localhost:8080
+
 --- 
 
 spring: 
