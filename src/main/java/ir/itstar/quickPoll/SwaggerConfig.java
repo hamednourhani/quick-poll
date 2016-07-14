@@ -78,7 +78,7 @@ public class SwaggerConfig {
 	}
 	
 	private Contact mycontact(){
-		return new Contact("Hamed Nourhani","itstar.ir","itstarir@gamil.com");
+		return new Contact("Hamed Nourhani","http://itstar.ir","itstarir@gamil.com");
 	}
 	
 	private BasicAuth getBasicAuthCredentials(){

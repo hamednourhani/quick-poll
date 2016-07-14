@@ -1,10 +1,13 @@
 package ir.itstar.quickPoll.v2.controller;
 
+
 import java.net.URI;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -60,8 +63,8 @@ public class PollController {
 	
 	@RequestMapping(value="/polls", method=RequestMethod.GET)
 	@ApiOperation(value = "Retrieves all the polls", response=Poll.class, responseContainer="List")
-	public ResponseEntity<Iterable<Poll>> getAllPolls() {
-		Iterable<Poll> allPolls = pollRepository.findAll();
+	public ResponseEntity<Page<Poll>> getAllPolls(Pageable pageable) {
+		Page<Poll> allPolls = pollRepository.findAll(pageable);
 		return new ResponseEntity<>(allPolls, HttpStatus.OK);
 	}
 
