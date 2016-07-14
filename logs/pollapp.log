@@ -6141,3 +6141,218 @@ org.hsqldb.HsqlException: user lacks privilege or object not found: OPTION
 2016-07-14 08:55:15.858 DEBUG 4768 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
 2016-07-14 09:08:52.230 DEBUG 4768 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select v.* from POLL_Option o, Vote v where o.POLL_ID = ? and v.OPTION_ID = o.OPTION_ID
 2016-07-14 09:08:52.232 DEBUG 4768 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
+2016-07-14 09:24:02.239 DEBUG 4768 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select poll0_.poll_id as poll_id1_0_, poll0_.question as question2_0_ from poll poll0_
+2016-07-14 09:24:02.246 DEBUG 4768 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select options0_.poll_id as poll_id3_0_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option_value as option_v2_1_1_ from poll_option options0_ where options0_.poll_id=? order by options0_.option_id asc
+2016-07-14 09:24:02.256 DEBUG 4768 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select options0_.poll_id as poll_id3_0_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option_value as option_v2_1_1_ from poll_option options0_ where options0_.poll_id=? order by options0_.option_id asc
+2016-07-14 09:30:51.193  INFO 4768 --- [Thread-127] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@775831a2: startup date [Thu Jul 14 08:49:37 PDT 2016]; root of context hierarchy
+2016-07-14 09:30:51.224  INFO 4768 --- [Thread-127] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 09:30:51.224  INFO 4768 --- [Thread-127] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 09:30:51.266  INFO 4768 --- [Thread-127] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 09:30:51.271  INFO 4768 --- [Thread-127] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 09:30:51.272  INFO 4768 --- [Thread-127] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 09:30:51.273 DEBUG 4768 --- [Thread-127] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 09:30:51.281 DEBUG 4768 --- [Thread-127] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 09:30:51.282 DEBUG 4768 --- [Thread-127] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 09:30:51.283 DEBUG 4768 --- [Thread-127] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 09:30:51.283 DEBUG 4768 --- [Thread-127] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 09:30:51.284  INFO 4768 --- [Thread-127] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 09:30:52.373  INFO 4768 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 4768 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 09:30:52.374  INFO 4768 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 09:30:52.398  INFO 4768 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a4956c4: startup date [Thu Jul 14 09:30:52 PDT 2016]; root of context hierarchy
+2016-07-14 09:30:54.085  INFO 4768 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8edc3dc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 09:30:54.148  INFO 4768 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 09:30:54.149  INFO 4768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 09:30:54.149  INFO 4768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 09:30:54.166  INFO 4768 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 09:30:54.176  INFO 4768 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1778 ms
+2016-07-14 09:30:54.623  INFO 4768 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 09:30:54.624  INFO 4768 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 09:30:54.625  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 09:30:54.626  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 09:30:54.626  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 09:30:54.626  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 09:30:54.626  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 09:30:54.635  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 09:30:54.635  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 09:30:54.821  INFO 4768 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 09:30:54.822  INFO 4768 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 09:30:54.892  INFO 4768 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 09:30:54.905  INFO 4768 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 09:30:54.943  INFO 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 09:30:54.944 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 09:30:54.952 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 09:30:54.952 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 09:30:54.952 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 09:30:54.952 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 09:30:54.952 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 09:30:54.952 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 09:30:54.953 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 09:30:54.953 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 09:30:54.960 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 09:30:54.960 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 09:30:54.961 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 09:30:54.963 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 09:30:54.964 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 09:30:54.965  INFO 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 09:30:55.329  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 09:30:55.330  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 09:30:55.331  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 09:30:55.331  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 09:30:55.331  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 09:30:55.332  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 09:30:55.333  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 09:30:55.333  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 09:30:55.334  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 09:30:55.336  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 09:30:55.343  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 09:30:55.344  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 09:30:55.344  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 09:30:55.344  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 09:30:55.345  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 09:30:55.345  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 09:30:55.345  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 09:30:55.346  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 09:30:55.347  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 09:30:55.347  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 09:30:55.349  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 09:30:55.349  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 09:30:55.583  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 09:30:55.583  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.584  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 09:30:55.584  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.594  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.595  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 09:30:55.595  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.596  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.596  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.602  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.602  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.603  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 09:30:55.604  INFO 4768 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 09:30:55.666  INFO 4768 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a4956c4: startup date [Thu Jul 14 09:30:52 PDT 2016]; root of context hierarchy
+2016-07-14 09:30:55.687  INFO 4768 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 09:30:55.687  INFO 4768 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 09:30:55.690  INFO 4768 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 09:30:55.702  INFO 4768 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 09:30:55.710  INFO 4768 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 09:30:55.930  INFO 4768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 09:30:56.001  INFO 4768 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 09:30:56.008  INFO 4768 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 09:30:56.042  INFO 4768 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 09:30:56.043  INFO 4768 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 09:30:56.045  INFO 4768 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2016-07-14 09:30:56.048  INFO 4768 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 09:30:56.094  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 09:30:56.109  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 09:30:56.111  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 09:30:56.112  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 09:30:56.113  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 09:30:56.115  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 09:30:56.116  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 09:30:56.117  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 09:30:56.118  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 09:30:56.119  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 09:30:56.125  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 09:30:56.126  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 09:30:56.127  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 09:30:56.127  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 09:30:56.129  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 09:30:56.130  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 09:30:56.138  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 09:30:56.153  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 09:30:56.154  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 09:30:56.155  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 09:30:56.156  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 09:30:56.157  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 09:30:56.157  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 09:30:56.158  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 09:30:56.159  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 09:30:56.161  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 09:30:56.168  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 09:30:56.169  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 09:30:56.170  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 09:30:56.171  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 09:30:56.173  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 09:30:56.176  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 09:30:56.225  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 09:30:56.229  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 09:30:56.233  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 09:30:56.237  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 09:30:56.242  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 09:30:56.257  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 09:30:56.261  INFO 4768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 09:30:56.279  INFO 4768 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 09:30:56.283  INFO 4768 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 3.982 seconds (JVM running for 10393.726)
+2016-07-14 09:35:50.222  INFO 4768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 09:35:50.231  INFO 4768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 09:35:50.239  INFO 4768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 8 ms
+2016-07-14 09:43:55.246 DEBUG 4768 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select poll0_.poll_id as poll_id1_0_, poll0_.question as question2_0_ from poll poll0_
+2016-07-14 09:45:27.790 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select poll0_.poll_id as poll_id1_0_1_, poll0_.question as question2_0_1_, options1_.poll_id as poll_id3_0_3_, options1_.option_id as option_i1_1_3_, options1_.option_id as option_i1_1_0_, options1_.option_value as option_v2_1_0_ from poll poll0_ left outer join poll_option options1_ on poll0_.poll_id=options1_.poll_id where poll0_.poll_id=? order by options1_.option_id asc
+2016-07-14 09:45:27.800 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into poll (poll_id, question) values (default, ?)
+2016-07-14 09:45:27.801 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
+2016-07-14 09:45:27.807 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into poll_option (option_id, option_value) values (default, ?)
+2016-07-14 09:45:27.808 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
+2016-07-14 09:45:27.816 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into poll_option (option_id, option_value) values (default, ?)
+2016-07-14 09:45:27.819 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : update poll_option set poll_id=? where option_id=?
+2016-07-14 09:45:27.820 DEBUG 4768 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : update poll_option set poll_id=? where option_id=?
+2016-07-14 09:47:03.832 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select poll0_.poll_id as poll_id1_0_1_, poll0_.question as question2_0_1_, options1_.poll_id as poll_id3_0_3_, options1_.option_id as option_i1_1_3_, options1_.option_id as option_i1_1_0_, options1_.option_value as option_v2_1_0_ from poll poll0_ left outer join poll_option options1_ on poll0_.poll_id=options1_.poll_id where poll0_.poll_id=? order by options1_.option_id asc
+2016-07-14 09:47:03.841 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into poll (poll_id, question) values (default, ?)
+2016-07-14 09:47:03.842 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
+2016-07-14 09:47:03.849 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into poll_option (option_id, option_value) values (default, ?)
+2016-07-14 09:47:03.850 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select option0_.option_id as option_i1_1_0_, option0_.option_value as option_v2_1_0_ from poll_option option0_ where option0_.option_id=?
+2016-07-14 09:47:03.860 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update poll_option set poll_id=? where option_id=?
+2016-07-14 09:47:03.860 DEBUG 4768 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update poll_option set poll_id=? where option_id=?
+2016-07-14 11:09:20.758  INFO 4768 --- [Thread-133] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a4956c4: startup date [Thu Jul 14 09:30:52 PDT 2016]; root of context hierarchy
+2016-07-14 11:09:20.764  INFO 4768 --- [Thread-133] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:09:20.779  INFO 4768 --- [Thread-133] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:09:20.798  INFO 4768 --- [Thread-133] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:09:20.801  INFO 4768 --- [Thread-133] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:09:20.806  INFO 4768 --- [Thread-133] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:09:20.814 DEBUG 4768 --- [Thread-133] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:09:20.818 DEBUG 4768 --- [Thread-133] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:09:20.819 DEBUG 4768 --- [Thread-133] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:09:20.819 DEBUG 4768 --- [Thread-133] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:09:20.821 DEBUG 4768 --- [Thread-133] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:09:20.822  INFO 4768 --- [Thread-133] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:09:22.217  INFO 4768 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 4768 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:09:22.217  INFO 4768 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:09:22.231  INFO 4768 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5fe60b7a: startup date [Thu Jul 14 11:09:22 PDT 2016]; root of context hierarchy
+2016-07-14 11:09:23.927  INFO 4768 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8edc3dc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:09:24.140  INFO 4768 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:09:24.141  INFO 4768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:09:24.141  INFO 4768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:09:24.251  INFO 4768 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:09:24.258  INFO 4768 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2028 ms
+2016-07-14 11:09:24.510  INFO 4768 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:09:24.510  INFO 4768 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:09:24.511  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:09:24.516  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:09:24.516  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:09:24.517  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:09:24.517  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:09:24.522  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:09:24.522  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:09:24.695  INFO 4768 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:09:24.695  INFO 4768 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:09:24.743  INFO 4768 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:09:24.753  INFO 4768 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:09:24.789  INFO 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:09:24.791 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:09:24.797 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:09:24.797 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:09:24.797 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:09:24.797 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:09:24.797 ERROR 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:09:24.797 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:09:24.798 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:09:25.965 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:09:25.976 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:09:25.977 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:09:25.977 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:09:25.978 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:09:25.985 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:09:25.987  INFO 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete

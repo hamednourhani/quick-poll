@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import ir.itstar.quickPoll.domain.Poll;
+import ir.itstar.quickPoll.dto.ErrorDetail;
 import ir.itstar.quickPoll.exception.ResourceNotFoundException;
 import ir.itstar.quickPoll.repository.PollRepository;
 
@@ -30,8 +33,8 @@ public class PollController {
 	@RequestMapping(value="/polls", method=RequestMethod.POST)
 	@ApiOperation(value = "Creates a new Poll", notes="The newly created poll Id will be sent in the location response header", 
 					response = Void.class)
-	//@ApiResponses(value = {@ApiResponse(code=201, message="Poll Created Successfully", response=Void.class),  
-		//	@ApiResponse(code=500, message="Error creating Poll", response=ErrorDetail.class) } )
+	@ApiResponses(value = {@ApiResponse(code=201, message="Poll Created Successfully", response=Void.class),  
+			@ApiResponse(code=500, message="Error creating Poll", response=ErrorDetail.class) } )
 	public ResponseEntity<Void> createPoll(@Valid @RequestBody Poll poll) {
 		poll = pollRepository.save(poll);
 		
@@ -45,8 +48,8 @@ public class PollController {
 
 	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.GET)
 	@ApiOperation(value = "Retrieves given Poll", response=Poll.class)
-	//@ApiResponses(value = {@ApiResponse(code=200, message="", response=Poll.class),  
-		//	@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
+	@ApiResponses(value = {@ApiResponse(code=200, message="", response=Poll.class),  
+			@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
 	public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
 		verifyPoll(pollId);
 		Poll p = pollRepository.findOne(pollId);
@@ -62,8 +65,8 @@ public class PollController {
 
 	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.PUT)
 	@ApiOperation(value = "Updates given Poll", response=Void.class)
-	//@ApiResponses(value = {@ApiResponse(code=200, message="", response=Void.class),  
-		//	@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
+	@ApiResponses(value = {@ApiResponse(code=200, message="", response=Void.class),  
+			@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
 	public ResponseEntity<Void> updatePoll(@RequestBody Poll poll, @PathVariable Long pollId) {
 		verifyPoll(pollId);
 		pollRepository.save(poll);
@@ -72,8 +75,8 @@ public class PollController {
 	
 	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.DELETE)
 	@ApiOperation(value = "Deletes given Poll", response=Void.class)
-	//@ApiResponses(value = {@ApiResponse(code=200, message="", response=Void.class),  
-		//	@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
+	@ApiResponses(value = {@ApiResponse(code=200, message="", response=Void.class),  
+			@ApiResponse(code=404, message="Unable to find Poll", response=ErrorDetail.class) } )
 	public ResponseEntity<Void> deletePoll(@PathVariable Long pollId) {
 		verifyPoll(pollId);
 		pollRepository.delete(pollId);
