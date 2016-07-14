@@ -12,20 +12,18 @@ import javax.persistence.Table;
 @Table(name="POLL_OPTION")
 public class Option {
 
-	
-	
-	@Id
-	@GeneratedValue
-	@Column(name="OPTION_ID")
-	private long id;
-	
-	@Column(name="OPTION_VALUE")
+    @Id
+    @GeneratedValue
+    @Column(name="OPTION_ID")
+	private Long id;
+    
+    @Column(name="OPTION_VALUE")
 	private String value;
-	
-	public long getId() {
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getValue() {
@@ -34,7 +32,9 @@ public class Option {
 	public void setValue(String value) {
 		this.value = value;
 	}
-	public void somemethod(){
-		
+	
+	@Override
+	public String toString() {
+		return getId() + "," + getValue();
 	}
 }

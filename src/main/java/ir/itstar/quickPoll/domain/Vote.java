@@ -9,20 +9,20 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Vote {
-	
+
 	@Id
 	@GeneratedValue
 	@Column(name="VOTE_ID")
-	private long id;
+	private Long id;
 	
 	@ManyToOne
 	@JoinColumn(name="OPTION_ID")
 	private Option option;
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public Option getOption() {
@@ -31,4 +31,10 @@ public class Vote {
 	public void setOption(Option option) {
 		this.option = option;
 	}
+	
+	@Override
+	public String toString() {
+		return getId() + ", " + getOption();
+	}
+	
 }
