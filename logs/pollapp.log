@@ -6356,3 +6356,948 @@ org.hsqldb.HsqlException: user lacks privilege or object not found: OPTION
 2016-07-14 11:09:25.978 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
 2016-07-14 11:09:25.985 DEBUG 4768 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
 2016-07-14 11:09:25.987  INFO 4768 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:27:22.284  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:27:22.292  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:27:22.923  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@769ae2b9: startup date [Thu Jul 14 11:27:22 PDT 2016]; root of context hierarchy
+2016-07-14 11:27:28.841  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:27:30.042  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:27:30.078  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:27:30.088  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:27:30.306  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:27:30.315  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7399 ms
+2016-07-14 11:27:31.290  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:27:31.298  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:27:31.304  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:27:31.310  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:27:31.311  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:27:31.311  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:27:31.312  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:27:31.319  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:27:31.319  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:27:31.848  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:27:31.866  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:27:32.011  INFO 7604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-07-14 11:27:32.015  INFO 7604 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-07-14 11:27:32.018  INFO 7604 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-07-14 11:27:32.639  INFO 7604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-07-14 11:27:33.380  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:27:33.658  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:27:34.221  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:27:34.226 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:27:34.236 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:27:34.237 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:27:34.245 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:27:34.246 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:27:34.253 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:27:34.253 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:27:34.256 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:27:34.258 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:27:34.260 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:27:34.265 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:27:34.267 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:27:34.270 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:27:34.279 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:27:34.280  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:27:36.240  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:27:36.253  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:27:36.260  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:27:36.261  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:27:36.262  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:27:36.262  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:27:36.275  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:27:36.275  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:27:36.277  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:27:36.281  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:27:36.282  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:27:36.284  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:27:36.286  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:27:36.286  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:27:36.288  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:27:36.289  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:27:36.291  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:27:36.298  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:27:36.300  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:27:36.301  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:27:36.305  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:27:36.305  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:27:37.138  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:27:37.143  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.145  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.147  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.149  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:27:37.151  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.153  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:27:37.155  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.164  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:27:37.165  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.166  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.168  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.169  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:27:37.688  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@769ae2b9: startup date [Thu Jul 14 11:27:22 PDT 2016]; root of context hierarchy
+2016-07-14 11:27:37.825  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:27:37.826  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:27:37.832  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:27:37.868  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:27:37.909  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:27:39.100  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:27:39.237  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:27:39.268  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:27:39.396  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:27:39.397  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:27:39.439  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2016-07-14 11:27:39.458  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:27:39.822  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 11:27:39.832  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 11:27:39.842  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 11:27:39.845  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 11:27:39.848  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 11:27:39.851  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 11:27:39.859  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 11:27:39.863  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 11:27:39.866  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 11:27:39.869  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 11:27:39.873  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 11:27:39.877  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 11:27:39.881  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 11:27:39.884  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 11:27:39.897  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 11:27:39.902  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 11:27:39.930  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 11:27:39.952  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 11:27:39.955  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 11:27:39.959  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 11:27:39.963  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 11:27:39.966  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 11:27:39.976  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 11:27:39.980  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 11:27:39.982  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 11:27:39.986  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 11:27:39.987  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 11:27:39.989  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 11:27:39.991  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 11:27:39.995  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 11:27:39.999  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 11:27:40.004  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 11:27:40.123  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 11:27:40.134  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 11:27:40.143  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 11:27:40.151  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 11:27:40.163  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 11:27:40.211  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 11:27:40.248  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 11:27:40.560  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:27:40.585  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 19.043 seconds (JVM running for 20.092)
+2016-07-14 11:27:46.381  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:27:46.386  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:27:46.416  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2016-07-14 11:32:54.548  INFO 7604 --- [Thread-9] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@769ae2b9: startup date [Thu Jul 14 11:27:22 PDT 2016]; root of context hierarchy
+2016-07-14 11:32:54.574  INFO 7604 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:32:54.583  INFO 7604 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:32:54.593  INFO 7604 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:32:54.713  INFO 7604 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:32:54.714  INFO 7604 --- [Thread-9] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:32:54.873 DEBUG 7604 --- [Thread-9] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:32:54.876 DEBUG 7604 --- [Thread-9] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:32:54.878 DEBUG 7604 --- [Thread-9] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:32:54.879 DEBUG 7604 --- [Thread-9] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:32:54.889 DEBUG 7604 --- [Thread-9] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:32:54.891  INFO 7604 --- [Thread-9] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:32:55.646  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:32:55.647  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:32:55.651  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58aaa541: startup date [Thu Jul 14 11:32:55 PDT 2016]; root of context hierarchy
+2016-07-14 11:32:58.515  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:32:58.622  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:32:58.624  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:32:58.626  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:32:58.674  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:32:58.683  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3032 ms
+2016-07-14 11:32:58.925  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:32:58.926  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:32:58.927  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:32:58.932  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:32:58.932  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:32:58.941  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:32:58.942  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:32:58.951  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:32:58.951  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:32:59.219  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:32:59.220  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:32:59.375  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:32:59.396  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:32:59.448  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:32:59.449 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:32:59.455 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:32:59.455 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:32:59.455 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:32:59.456 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:32:59.456 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:32:59.456 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:32:59.457 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:32:59.457 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:32:59.464 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:32:59.466 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:32:59.467 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:32:59.468 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:32:59.469 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:32:59.470  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:32:59.884  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:32:59.887  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:32:59.888  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:32:59.890  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:32:59.890  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:32:59.891  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:32:59.892  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:32:59.893  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:32:59.894  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:32:59.897  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:32:59.905  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:32:59.905  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:32:59.906  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:32:59.906  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:32:59.907  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:32:59.907  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:32:59.908  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:32:59.910  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:32:59.910  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:32:59.910  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:32:59.914  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:32:59.914  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:33:00.187  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:33:00.188  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.188  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:33:00.189  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.198  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:33:00.199  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:33:00.200  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.201  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.202  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.202  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.204  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.205  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.206  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:33:00.277  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58aaa541: startup date [Thu Jul 14 11:32:55 PDT 2016]; root of context hierarchy
+2016-07-14 11:33:00.302  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:33:00.302  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:33:00.303  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:33:00.319  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:33:00.327  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:33:00.549  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:33:00.641  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:33:00.651  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:33:00.702  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:33:00.702  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:33:00.705  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2016-07-14 11:33:00.709  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:33:00.851  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:33:00.860  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 5.373 seconds (JVM running for 340.368)
+2016-07-14 11:33:11.138  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:33:11.143  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:33:11.150  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2016-07-14 11:35:38.749  INFO 7604 --- [Thread-15] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58aaa541: startup date [Thu Jul 14 11:32:55 PDT 2016]; root of context hierarchy
+2016-07-14 11:35:38.774  INFO 7604 --- [Thread-15] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:35:38.775  INFO 7604 --- [Thread-15] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:35:38.780  INFO 7604 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:35:38.788  INFO 7604 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:35:38.795  INFO 7604 --- [Thread-15] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:35:38.797 DEBUG 7604 --- [Thread-15] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:35:38.799 DEBUG 7604 --- [Thread-15] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:35:38.800 DEBUG 7604 --- [Thread-15] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:35:38.801 DEBUG 7604 --- [Thread-15] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:35:38.802 DEBUG 7604 --- [Thread-15] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:35:38.804  INFO 7604 --- [Thread-15] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:35:40.025  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:35:40.037  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:35:40.042  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4744982c: startup date [Thu Jul 14 11:35:40 PDT 2016]; root of context hierarchy
+2016-07-14 11:35:42.652  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:35:42.735  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:35:42.737  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:35:42.737  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:35:42.755  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:35:42.769  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2727 ms
+2016-07-14 11:35:42.985  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:35:42.986  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:35:42.987  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:35:42.994  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:35:42.995  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:35:42.995  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:35:42.996  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:35:43.003  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:35:43.004  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:35:43.211  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:35:43.211  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:35:43.309  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:35:43.327  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:35:43.380  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:35:43.382 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:35:43.388 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:35:43.388 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:35:43.388 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:35:43.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:35:43.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:35:43.389 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:35:43.390 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:35:43.390 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:35:43.396 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:35:43.398 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:35:43.400 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:35:43.400 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:35:43.401 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:35:43.402  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:35:43.776  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:35:43.778  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:35:43.778  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:35:43.778  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:35:43.778  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:35:43.779  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:35:43.780  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:35:43.780  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:35:43.782  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:35:43.785  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:35:43.790  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:35:43.790  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:35:43.791  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:35:43.791  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:35:43.793  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:35:43.794  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:35:43.795  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:35:43.797  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:35:43.798  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:35:43.798  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:35:43.801  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:35:43.801  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:35:44.080  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.081  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.082  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.082  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.089  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:35:44.089  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.089  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:35:44.091  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:35:44.091  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.092  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.092  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:35:44.093  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.094  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:35:44.184  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4744982c: startup date [Thu Jul 14 11:35:40 PDT 2016]; root of context hierarchy
+2016-07-14 11:35:44.210  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:35:44.210  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:35:44.211  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:35:44.227  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:35:44.239  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:35:44.443  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:35:44.574  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:35:44.583  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:35:44.629  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:35:44.629  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:35:44.632  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2016-07-14 11:35:44.637  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:35:44.814  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:35:44.823  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 11:35:44.830  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 11:35:44.837  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 11:35:44.843  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 11:35:44.851  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 11:35:44.858  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 11:35:44.865  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 11:35:44.872  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 11:35:44.874  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:35:44.888  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_2
+2016-07-14 11:35:44.897  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_2
+2016-07-14 11:35:44.906  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_2
+2016-07-14 11:35:44.912  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_2
+2016-07-14 11:35:44.923  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_2
+2016-07-14 11:35:44.931  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_2
+2016-07-14 11:35:44.940  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_2
+2016-07-14 11:35:44.946  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_2
+2016-07-14 11:35:44.963  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:35:44.967  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 5.368 seconds (JVM running for 504.474)
+2016-07-14 11:36:13.346  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:36:13.353  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:36:13.364  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2016-07-14 11:48:26.869  INFO 7604 --- [Thread-21] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4744982c: startup date [Thu Jul 14 11:35:40 PDT 2016]; root of context hierarchy
+2016-07-14 11:48:26.879  INFO 7604 --- [Thread-21] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:48:26.880  INFO 7604 --- [Thread-21] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:48:26.887  INFO 7604 --- [Thread-21] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:48:26.893  INFO 7604 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:48:26.894  INFO 7604 --- [Thread-21] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:48:26.895 DEBUG 7604 --- [Thread-21] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:48:26.906 DEBUG 7604 --- [Thread-21] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:48:26.907 DEBUG 7604 --- [Thread-21] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:48:26.908 DEBUG 7604 --- [Thread-21] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:48:26.909 DEBUG 7604 --- [Thread-21] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:48:26.915  INFO 7604 --- [Thread-21] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:48:27.602  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:48:27.604  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:48:27.610  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ddb8c8d: startup date [Thu Jul 14 11:48:27 PDT 2016]; root of context hierarchy
+2016-07-14 11:48:29.691  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:48:29.768  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:48:29.770  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:48:29.770  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:48:29.789  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:48:29.799  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2189 ms
+2016-07-14 11:48:30.006  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:48:30.008  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:48:30.009  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:48:30.009  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:48:30.009  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:48:30.009  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:48:30.010  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:48:30.017  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:48:30.017  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:48:30.223  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:48:30.224  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:48:30.319  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:48:30.337  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:48:30.382  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:48:30.383 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:48:30.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:48:30.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:48:30.389 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:48:30.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:48:30.389 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:48:30.389 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:48:30.390 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:48:30.390 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:48:30.396 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:48:30.397 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:48:30.398 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:48:30.398 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:48:30.399 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:48:30.400  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:48:30.748  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:48:30.749  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:48:30.749  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:48:30.749  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:48:30.750  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:48:30.750  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:48:30.750  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:48:30.751  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:48:30.751  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:48:30.753  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:48:30.764  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:48:30.764  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:48:30.765  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:48:30.765  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:48:30.770  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:48:30.770  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:48:30.771  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:48:30.775  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:48:30.776  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:48:30.776  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:48:30.780  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:48:30.781  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:48:30.990  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:30.993  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:30.997  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:30.999  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.008  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:48:31.008  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.009  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:48:31.013  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.013  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:48:31.015  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.019  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.020  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:48:31.020  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:48:31.103  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ddb8c8d: startup date [Thu Jul 14 11:48:27 PDT 2016]; root of context hierarchy
+2016-07-14 11:48:31.121  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:48:31.122  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:48:31.122  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:48:31.136  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:48:31.144  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:48:31.355  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:48:31.438  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:48:31.449  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:48:31.485  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:48:31.485  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:48:31.488  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2016-07-14 11:48:31.490  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:48:31.558  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 11:48:31.567  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 11:48:31.570  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 11:48:31.575  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 11:48:31.578  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 11:48:31.581  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 11:48:31.584  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 11:48:31.587  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 11:48:31.588  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 11:48:31.591  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 11:48:31.601  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 11:48:31.603  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 11:48:31.606  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 11:48:31.609  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 11:48:31.611  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 11:48:31.622  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 11:48:31.651  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 11:48:31.654  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 11:48:31.658  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 11:48:31.664  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 11:48:31.670  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 11:48:31.672  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 11:48:31.675  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 11:48:31.677  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 11:48:31.681  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 11:48:31.682  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 11:48:31.688  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 11:48:31.689  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 11:48:31.693  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 11:48:31.695  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 11:48:31.701  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 11:48:31.704  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:48:31.790  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:48:31.798  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 11:48:31.806  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 11:48:31.812  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 11:48:31.819  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 11:48:31.826  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 11:48:31.833  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 11:48:31.840  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 11:48:31.846  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 11:48:31.874  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:48:31.890  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 4.39 seconds (JVM running for 1271.397)
+2016-07-14 11:48:50.863  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:48:50.870  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:48:50.876  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2016-07-14 11:54:01.638  INFO 7604 --- [Thread-27] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ddb8c8d: startup date [Thu Jul 14 11:48:27 PDT 2016]; root of context hierarchy
+2016-07-14 11:54:01.653  INFO 7604 --- [Thread-27] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:54:01.664  INFO 7604 --- [Thread-27] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:54:01.666  INFO 7604 --- [Thread-27] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:54:01.675  INFO 7604 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:54:01.675  INFO 7604 --- [Thread-27] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:54:01.676 DEBUG 7604 --- [Thread-27] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:54:01.677 DEBUG 7604 --- [Thread-27] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:54:01.678 DEBUG 7604 --- [Thread-27] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:54:01.679 DEBUG 7604 --- [Thread-27] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:54:01.679 DEBUG 7604 --- [Thread-27] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:54:01.680  INFO 7604 --- [Thread-27] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:54:02.215  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:54:02.216  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:54:02.219  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@62e65617: startup date [Thu Jul 14 11:54:02 PDT 2016]; root of context hierarchy
+2016-07-14 11:54:04.979  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:54:05.064  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:54:05.066  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:54:05.066  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:54:05.082  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:54:05.091  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2872 ms
+2016-07-14 11:54:05.293  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:54:05.295  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:54:05.297  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:54:05.306  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:54:05.306  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:54:05.306  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:54:05.306  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:54:05.313  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:54:05.313  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:54:05.515  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:54:05.516  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:54:05.664  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:54:05.688  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:54:05.781  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:54:05.783 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:54:05.791 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:54:05.791 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:54:05.791 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:54:05.792 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:54:05.792 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:54:05.792 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:54:05.792 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:54:05.793 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:54:05.801 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:54:05.802 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:54:05.802 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:54:05.804 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:54:05.804 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:54:05.805  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:54:06.162  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:54:06.185  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:54:06.186  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:54:06.186  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:54:06.188  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:54:06.189  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:54:06.195  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:54:06.195  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:54:06.198  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:54:06.203  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:54:06.210  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:54:06.211  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:54:06.212  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:54:06.214  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:54:06.216  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:54:06.216  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:54:06.217  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:54:06.221  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:54:06.222  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:54:06.222  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:54:06.225  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:54:06.225  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:54:06.510  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:54:06.511  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.511  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.512  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.519  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.519  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.520  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.520  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.521  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:54:06.521  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.522  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:54:06.523  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:54:06.524  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:54:06.606  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@62e65617: startup date [Thu Jul 14 11:54:02 PDT 2016]; root of context hierarchy
+2016-07-14 11:54:06.636  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:54:06.637  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:54:06.637  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:54:06.653  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:54:06.664  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:54:06.866  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:54:06.947  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:54:06.958  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:54:06.997  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:54:06.997  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:54:07.002  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2016-07-14 11:54:07.005  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:54:07.052  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 11:54:07.054  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 11:54:07.056  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 11:54:07.058  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 11:54:07.061  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 11:54:07.064  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 11:54:07.066  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 11:54:07.068  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 11:54:07.072  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 11:54:07.077  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 11:54:07.084  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 11:54:07.086  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 11:54:07.087  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 11:54:07.091  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 11:54:07.094  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 11:54:07.107  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 11:54:07.118  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 11:54:07.120  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 11:54:07.121  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 11:54:07.123  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 11:54:07.125  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 11:54:07.128  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 11:54:07.130  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 11:54:07.133  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 11:54:07.136  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 11:54:07.137  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 11:54:07.144  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 11:54:07.145  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 11:54:07.148  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 11:54:07.150  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 11:54:07.155  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 11:54:07.159  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:54:07.245  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:54:07.253  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 11:54:07.265  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 11:54:07.271  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 11:54:07.279  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 11:54:07.288  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 11:54:07.299  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 11:54:07.307  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 11:54:07.313  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 11:54:07.327  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:54:07.337  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 5.216 seconds (JVM running for 1606.845)
+2016-07-14 11:54:11.877  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:54:11.884  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:54:11.891  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2016-07-14 11:59:25.809  INFO 7604 --- [Thread-33] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@62e65617: startup date [Thu Jul 14 11:54:02 PDT 2016]; root of context hierarchy
+2016-07-14 11:59:25.819  INFO 7604 --- [Thread-33] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 11:59:25.825  INFO 7604 --- [Thread-33] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 11:59:25.828  INFO 7604 --- [Thread-33] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 11:59:25.838  INFO 7604 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:59:25.838  INFO 7604 --- [Thread-33] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:59:25.839 DEBUG 7604 --- [Thread-33] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:59:25.841 DEBUG 7604 --- [Thread-33] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:59:25.841 DEBUG 7604 --- [Thread-33] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:59:25.841 DEBUG 7604 --- [Thread-33] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:59:25.842 DEBUG 7604 --- [Thread-33] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:59:25.842  INFO 7604 --- [Thread-33] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:59:26.477  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 11:59:26.485  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 11:59:26.490  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f973afe: startup date [Thu Jul 14 11:59:26 PDT 2016]; root of context hierarchy
+2016-07-14 11:59:28.449  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 11:59:28.522  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 11:59:28.523  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 11:59:28.524  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 11:59:28.542  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 11:59:28.551  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2061 ms
+2016-07-14 11:59:28.737  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 11:59:28.738  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 11:59:28.739  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 11:59:28.739  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 11:59:28.739  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 11:59:28.739  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 11:59:28.740  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 11:59:28.745  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 11:59:28.746  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 11:59:28.940  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 11:59:28.940  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 11:59:29.016  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 11:59:29.031  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 11:59:29.079  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 11:59:29.081 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:59:29.086 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 11:59:29.086 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 11:59:29.086 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:59:29.087 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 11:59:29.087 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 11:59:29.087 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 11:59:29.087 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 11:59:29.087 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 11:59:29.092 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 11:59:29.094 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 11:59:29.094 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 11:59:29.095 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 11:59:29.096 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 11:59:29.096  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 11:59:29.578  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:59:29.580  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:59:29.580  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:59:29.581  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:59:29.581  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 11:59:29.581  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:59:29.584  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:59:29.584  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:59:29.585  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 11:59:29.587  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 11:59:29.602  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 11:59:29.604  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 11:59:29.605  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 11:59:29.605  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 11:59:29.606  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 11:59:29.607  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 11:59:29.608  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 11:59:29.610  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 11:59:29.611  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 11:59:29.611  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 11:59:29.618  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 11:59:29.619  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 11:59:29.982  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.983  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.984  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 11:59:29.985  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.992  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.993  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 11:59:29.994  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.995  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 11:59:29.995  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.997  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.997  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:29.998  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 11:59:29.999  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 11:59:30.078  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f973afe: startup date [Thu Jul 14 11:59:26 PDT 2016]; root of context hierarchy
+2016-07-14 11:59:30.100  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:59:30.100  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:59:30.100  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:59:30.117  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 11:59:30.127  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 11:59:30.301  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 11:59:30.364  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 11:59:30.377  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 11:59:30.421  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 11:59:30.421  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 11:59:30.423  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2016-07-14 11:59:30.426  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:59:30.478  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 11:59:30.480  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 11:59:30.482  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 11:59:30.483  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 11:59:30.484  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 11:59:30.487  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 11:59:30.488  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 11:59:30.490  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 11:59:30.491  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 11:59:30.492  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 11:59:30.501  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 11:59:30.504  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 11:59:30.506  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 11:59:30.509  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 11:59:30.511  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 11:59:30.521  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 11:59:30.537  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 11:59:30.539  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 11:59:30.541  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 11:59:30.543  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 11:59:30.545  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 11:59:30.546  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 11:59:30.548  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 11:59:30.550  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 11:59:30.553  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 11:59:30.554  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 11:59:30.562  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 11:59:30.563  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 11:59:30.566  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 11:59:30.570  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 11:59:30.576  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 11:59:30.579  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:59:30.668  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 11:59:30.679  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 11:59:30.687  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 11:59:30.694  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 11:59:30.699  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 11:59:30.706  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 11:59:30.712  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 11:59:30.719  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 11:59:30.725  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 11:59:30.744  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 11:59:30.756  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 4.389 seconds (JVM running for 1930.264)
+2016-07-14 11:59:54.429  INFO 7604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-14 11:59:54.435  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-14 11:59:54.442  INFO 7604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2016-07-14 12:02:47.316  INFO 7604 --- [Thread-39] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f973afe: startup date [Thu Jul 14 11:59:26 PDT 2016]; root of context hierarchy
+2016-07-14 12:02:47.329  INFO 7604 --- [Thread-39] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-07-14 12:02:47.338  INFO 7604 --- [Thread-39] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-14 12:02:47.341  INFO 7604 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-14 12:02:47.354  INFO 7604 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-14 12:02:47.355  INFO 7604 --- [Thread-39] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 12:02:47.356 DEBUG 7604 --- [Thread-39] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 12:02:47.358 DEBUG 7604 --- [Thread-39] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 12:02:47.359 DEBUG 7604 --- [Thread-39] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 12:02:47.360 DEBUG 7604 --- [Thread-39] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 12:02:47.360 DEBUG 7604 --- [Thread-39] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 12:02:47.361  INFO 7604 --- [Thread-39] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 12:02:48.079  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Starting QuickPollApplication on DESKTOP-KSNN35K with PID 7604 (C:\Users\itstar\Documents\springworkspace\quick-poll\target\classes started by itstar in C:\Users\itstar\Documents\springworkspace\quick-poll)
+2016-07-14 12:02:48.079  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : The following profiles are active: dev
+2016-07-14 12:02:48.081  INFO 7604 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@500f960f: startup date [Thu Jul 14 12:02:48 PDT 2016]; root of context hierarchy
+2016-07-14 12:02:50.002  INFO 7604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c746ee00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-14 12:02:50.077  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-07-14 12:02:50.078  INFO 7604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-14 12:02:50.079  INFO 7604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-14 12:02:50.098  INFO 7604 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-14 12:02:50.106  INFO 7604 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2025 ms
+2016-07-14 12:02:50.294  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-14 12:02:50.295  INFO 7604 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/console/*]
+2016-07-14 12:02:50.295  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-14 12:02:50.296  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-14 12:02:50.296  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-14 12:02:50.296  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-14 12:02:50.296  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-14 12:02:50.303  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-14 12:02:50.303  INFO 7604 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-14 12:02:50.458  INFO 7604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-14 12:02:50.458  INFO 7604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-14 12:02:50.526  INFO 7604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2016-07-14 12:02:50.543  INFO 7604 --- [restartedMain] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-14 12:02:50.590  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-14 12:02:50.591 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 12:02:50.597 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table poll_option drop constraint FK_22y304a13f2oc027h709k2jqg
+2016-07-14 12:02:50.597 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.POLL_OPTION
+2016-07-14 12:02:50.597 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 12:02:50.597 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000389: Unsuccessful: alter table vote drop constraint FK_iapq3bru7895xja10urna3t2j
+2016-07-14 12:02:50.597 ERROR 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : user lacks privilege or object not found: PUBLIC.VOTE
+2016-07-14 12:02:50.597 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll if exists
+2016-07-14 12:02:50.598 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table poll_option if exists
+2016-07-14 12:02:50.598 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : drop table vote if exists
+2016-07-14 12:02:50.603 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll (poll_id bigint generated by default as identity (start with 1), question varchar(255) not null, primary key (poll_id))
+2016-07-14 12:02:50.604 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table poll_option (option_id bigint generated by default as identity (start with 1), option_value varchar(255), poll_id bigint, primary key (option_id))
+2016-07-14 12:02:50.605 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : create table vote (vote_id bigint generated by default as identity (start with 1), option_id bigint, primary key (vote_id))
+2016-07-14 12:02:50.605 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table poll_option add constraint FK_22y304a13f2oc027h709k2jqg foreign key (poll_id) references poll
+2016-07-14 12:02:50.606 DEBUG 7604 --- [restartedMain] org.hibernate.SQL                        : alter table vote add constraint FK_iapq3bru7895xja10urna3t2j foreign key (option_id) references poll_option
+2016-07-14 12:02:50.606  INFO 7604 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-14 12:02:50.947  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 12:02:50.949  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 12:02:50.950  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 12:02:50.950  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v1.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 12:02:50.950  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v1.controller.PollController.getAllPolls()
+2016-07-14 12:02:50.951  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 12:02:50.952  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v1.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 12:02:50.953  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v1.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 12:02:50.953  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/computeresult],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.ComputeResultController.computeResult(java.lang.Long)
+2016-07-14 12:02:50.955  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.updatePoll(ir.itstar.quickPoll.domain.Poll,java.lang.Long)
+2016-07-14 12:02:50.963  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.createPoll(ir.itstar.quickPoll.domain.Poll)
+2016-07-14 12:02:50.963  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> ir.itstar.quickPoll.v2.controller.PollController.getPoll(java.lang.Long)
+2016-07-14 12:02:50.964  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<ir.itstar.quickPoll.domain.Poll>> ir.itstar.quickPoll.v2.controller.PollController.getAllPolls()
+2016-07-14 12:02:50.964  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.PollController.deletePoll(java.lang.Long)
+2016-07-14 12:02:50.965  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[GET]}" onto public java.lang.Iterable<ir.itstar.quickPoll.domain.Vote> ir.itstar.quickPoll.v2.controller.VoteController.getAllVotes(java.lang.Long)
+2016-07-14 12:02:50.965  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/polls/{pollId}/votes],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> ir.itstar.quickPoll.v2.controller.VoteController.createVote(java.lang.Long,ir.itstar.quickPoll.domain.Vote)
+2016-07-14 12:02:50.966  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-07-14 12:02:50.970  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-14 12:02:50.971  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-14 12:02:50.971  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-14 12:02:50.973  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-14 12:02:50.974  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-14 12:02:51.152  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.155  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.156  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-14 12:02:51.157  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.165  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.166  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-14 12:02:51.166  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-07-14 12:02:51.166  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.167  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.171  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.172  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-14 12:02:51.172  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.173  INFO 7604 --- [restartedMain] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-14 12:02:51.249  INFO 7604 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@500f960f: startup date [Thu Jul 14 12:02:48 PDT 2016]; root of context hierarchy
+2016-07-14 12:02:51.277  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 12:02:51.278  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 12:02:51.278  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 12:02:51.290  INFO 7604 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2016-07-14 12:02:51.297  INFO 7604 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-14 12:02:51.447  INFO 7604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-07-14 12:02:51.500  INFO 7604 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-14 12:02:51.509  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-14 12:02:51.544  INFO 7604 --- [restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-07-14 12:02:51.546  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-14 12:02:51.556  INFO 7604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 3 custom documentation plugin(s)
+2016-07-14 12:02:51.559  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 12:02:51.596  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-14 12:02:51.597  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-14 12:02:51.598  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-14 12:02:51.600  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-14 12:02:51.602  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-14 12:02:51.604  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-14 12:02:51.606  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-14 12:02:51.607  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-14 12:02:51.609  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-14 12:02:51.611  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-14 12:02:51.619  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-14 12:02:51.620  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-14 12:02:51.622  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-14 12:02:51.625  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-14 12:02:51.627  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-14 12:02:51.639  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-14 12:02:51.653  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-14 12:02:51.657  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-14 12:02:51.661  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-14 12:02:51.664  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-14 12:02:51.666  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-14 12:02:51.667  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-14 12:02:51.668  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-14 12:02:51.669  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-14 12:02:51.672  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-14 12:02:51.673  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_2
+2016-07-14 12:02:51.681  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-14 12:02:51.682  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_3
+2016-07-14 12:02:51.684  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-14 12:02:51.686  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-14 12:02:51.690  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-14 12:02:51.692  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 12:02:51.798  INFO 7604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-14 12:02:51.806  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: computeResultUsingGET_1
+2016-07-14 12:02:51.814  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createPollUsingPOST_1
+2016-07-14 12:02:51.819  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deletePollUsingDELETE_1
+2016-07-14 12:02:51.827  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllPollsUsingGET_1
+2016-07-14 12:02:51.832  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPollUsingGET_1
+2016-07-14 12:02:51.838  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePollUsingPUT_1
+2016-07-14 12:02:51.843  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createVoteUsingPOST_1
+2016-07-14 12:02:51.848  INFO 7604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllVotesUsingGET_1
+2016-07-14 12:02:51.867  INFO 7604 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-07-14 12:02:51.878  INFO 7604 --- [restartedMain] i.itstar.quickPoll.QuickPollApplication  : Started QuickPollApplication in 3.877 seconds (JVM running for 2131.386)

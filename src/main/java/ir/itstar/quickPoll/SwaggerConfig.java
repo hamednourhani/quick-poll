@@ -20,16 +20,44 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 	
 	@Bean
-	public Docket api(){
+	public Docket v1Api(){
 		
 		List<BasicAuth> authArray = new ArrayList<>();
 		authArray.add(getBasicAuthCredentials());
 		
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("poll-app")
+				.groupName("v1")
 				.select()
 				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.any())
+				.paths(PathSelectors.regex("/v1/*.*"))
+				.build()
+				.apiInfo(apiInfo());
+	}
+	@Bean
+	public Docket v2Api(){
+		
+		List<BasicAuth> authArray = new ArrayList<>();
+		authArray.add(getBasicAuthCredentials());
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("v2")
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.regex("/v2/*.*"))
+				.build()
+				.apiInfo(apiInfo());
+	}
+	@Bean
+	public Docket adminApi(){
+		
+		List<BasicAuth> authArray = new ArrayList<>();
+		authArray.add(getBasicAuthCredentials());
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("admin")
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.regex("(^(?!/v[0-9]/).*$)"))
 				.build()
 				.securitySchemes(authArray)
 				.apiInfo(apiInfo());
