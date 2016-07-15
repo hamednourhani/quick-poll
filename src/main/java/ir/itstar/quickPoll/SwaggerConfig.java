@@ -47,6 +47,21 @@ public class SwaggerConfig {
 				.build()
 				.apiInfo(apiInfo());
 	}
+	
+	@Bean
+	public Docket v3Api(){
+		
+		List<BasicAuth> authArray = new ArrayList<>();
+		authArray.add(getBasicAuthCredentials());
+		
+		return new Docket(DocumentationType.SWAGGER_2)
+				.groupName("v3")
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.regex("/v3/*.*"))
+				.build()
+				.apiInfo(apiInfo());
+	}
 	@Bean
 	public Docket adminApi(){
 		
