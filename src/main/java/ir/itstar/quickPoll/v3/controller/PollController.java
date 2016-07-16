@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,7 @@ import ir.itstar.quickPoll.exception.ResourceNotFoundException;
 import ir.itstar.quickPoll.repository.PollRepository;
 
 @RestController("pollControllerV3")
-@RequestMapping("/v3/")
+@RequestMapping({"/v3/","/oauth2/v3/"})
 public class PollController {
 	
 	@Autowired
@@ -78,6 +79,7 @@ public class PollController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.DELETE)
 	@ApiOperation(value = "Deletes given Poll", response=Void.class)
 	@ApiResponses(value = {@ApiResponse(code=200, message="", response=Void.class),  

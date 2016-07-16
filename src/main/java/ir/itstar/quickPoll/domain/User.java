@@ -38,7 +38,6 @@ public class User {
 	private String lastName;
 	
 	@Column(name="ADMIN", columnDefinition="char(3)")
-//	@org.hibernate.annotations.Type(type="yes_no")
 	@Type(type="yes_no")
 	@NotEmpty
 	private boolean admin;
