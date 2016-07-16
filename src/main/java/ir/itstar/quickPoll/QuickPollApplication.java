@@ -15,3 +15,4 @@ public class QuickPollApplication extends WebMvcConfigurerAdapter {
 	
 
 }
+ 

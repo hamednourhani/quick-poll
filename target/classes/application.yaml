@@ -22,7 +22,7 @@ spring:
   jpa.show-sql : true
   devtools.restart.enabled : true
   thymeleaf.cache: false
-  application.admin.enabled : true
+  application.admin.enabled : false
 
 ---
 
