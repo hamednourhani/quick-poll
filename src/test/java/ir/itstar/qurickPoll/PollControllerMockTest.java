@@ -30,7 +30,7 @@ import ir.itstar.quickPoll.v1.controller.PollController;
 @SpringApplicationConfiguration(classes = QuickPollApplication.class)
 @ContextConfiguration(classes = MockServletContext.class) //create a blank ServletContext for test 
 @WebAppConfiguration
-public class PollControllerTest {
+public class PollControllerMockTest {
 	
 	@InjectMocks
 	PollController pollController;
