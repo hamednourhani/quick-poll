@@ -13,9 +13,10 @@ import javax.persistence.OrderBy;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.hateoas.ResourceSupport;
 
 @Entity
-public class Poll {
+public class Poll extends ResourceSupport {
 
 	@Id
 	@GeneratedValue
@@ -32,10 +33,10 @@ public class Poll {
 	@Size(min=2, max = 6)
 	private Set<Option> options;
 	
-	public Long getId() {
+	public Long getPollId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setPollId(Long id) {
 		this.id = id;
 	}
 	public String getQuestion() {
@@ -53,7 +54,7 @@ public class Poll {
 	
 	@Override
 	public String toString() {
-		return getId() + ", " + getQuestion() + ", " + getOptions();
+		return getPollId() + ", " + getQuestion() + ", " + getOptions();
 	}
 	
 }

@@ -40,7 +40,7 @@ public class PollController {
 		
 		// Set the location header for the newly created resource
 		HttpHeaders responseHeaders = new HttpHeaders();
-		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getId()).toUri();
+		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getPollId()).toUri();
 		responseHeaders.setLocation(newPollUri);
 		
 		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);

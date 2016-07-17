@@ -27,6 +27,7 @@ import ir.itstar.quickPoll.dto.ErrorDetail;
 import ir.itstar.quickPoll.exception.ResourceNotFoundException;
 import ir.itstar.quickPoll.repository.PollRepository;
 
+
 @RestController("pollControllerV3")
 @RequestMapping({"/v3/","/oauth2/v3/"})
 public class PollController {
@@ -44,7 +45,7 @@ public class PollController {
 		
 		// Set the location header for the newly created resource
 		HttpHeaders responseHeaders = new HttpHeaders();
-		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getId()).toUri();
+		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getPollId()).toUri();
 		responseHeaders.setLocation(newPollUri);
 		
 		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
@@ -59,6 +60,7 @@ public class PollController {
 	public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
 		verifyPoll(pollId);
 		Poll p = pollRepository.findOne(pollId);
+		
 		return new ResponseEntity<> (p, HttpStatus.OK);
 	}
 	
@@ -66,6 +68,7 @@ public class PollController {
 	@ApiOperation(value = "Retrieves all the polls", response=Poll.class, responseContainer="List")
 	public ResponseEntity<Page<Poll>> getAllPolls(Pageable pageable) {
 		Page<Poll> allPolls = pollRepository.findAll(pageable);
+		
 		return new ResponseEntity<>(allPolls, HttpStatus.OK);
 	}
 

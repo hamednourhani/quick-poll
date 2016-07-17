@@ -97,7 +97,7 @@ public class SwaggerConfig {
 	}
 	
 	private BasicAuth getBasicAuthCredentials(){
-        return new BasicAuth("superuser");
+        return new BasicAuth("admin");
     }
 	
 	

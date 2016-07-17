@@ -1,6 +1,9 @@
 package ir.itstar.quickPoll.v2.controller;
 
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
 import java.net.URI;
 
 import javax.validation.Valid;
@@ -25,6 +28,8 @@ import ir.itstar.quickPoll.domain.Poll;
 import ir.itstar.quickPoll.dto.ErrorDetail;
 import ir.itstar.quickPoll.exception.ResourceNotFoundException;
 import ir.itstar.quickPoll.repository.PollRepository;
+import ir.itstar.quickPoll.v2.controller.ComputeResultController;
+import ir.itstar.quickPoll.v2.controller.VoteController;
 
 @RestController("pollControllerV2")
 @RequestMapping("/v2/")
@@ -43,7 +48,7 @@ public class PollController {
 		
 		// Set the location header for the newly created resource
 		HttpHeaders responseHeaders = new HttpHeaders();
-		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getId()).toUri();
+		URI newPollUri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(poll.getPollId()).toUri();
 		responseHeaders.setLocation(newPollUri);
 		
 		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
@@ -58,6 +63,7 @@ public class PollController {
 	public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
 		verifyPoll(pollId);
 		Poll p = pollRepository.findOne(pollId);
+		updatePollResourceWithLinks(p);
 		return new ResponseEntity<> (p, HttpStatus.OK);
 	}
 	
@@ -65,6 +71,9 @@ public class PollController {
 	@ApiOperation(value = "Retrieves all the polls", response=Poll.class, responseContainer="List")
 	public ResponseEntity<Page<Poll>> getAllPolls(Pageable pageable) {
 		Page<Poll> allPolls = pollRepository.findAll(pageable);
+		for(Poll p : allPolls) {
+			updatePollResourceWithLinks(p);
+		}
 		return new ResponseEntity<>(allPolls, HttpStatus.OK);
 	}
 
@@ -93,6 +102,13 @@ public class PollController {
 		if(poll == null) {
 			throw new ResourceNotFoundException("Poll with id " + pollId + " not found"); 
 		}
+	}
+	
+	private void updatePollResourceWithLinks(Poll poll) {
+		
+		poll.add(linkTo(methodOn(PollController.class).getAllPolls(null)).slash(poll.getPollId()).withSelfRel());
+		poll.add(linkTo(methodOn(VoteController.class).getAllVotes(poll.getPollId())).withRel("votes"));
+		poll.add(linkTo(methodOn(ComputeResultController.class).computeResult(poll.getPollId())).withRel("compute-result"));
 	}
 	
 }
